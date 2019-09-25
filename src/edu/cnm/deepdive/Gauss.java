@@ -10,15 +10,11 @@ public class Gauss {
       if (upperBound <= 0) {
         throw new IllegalArgumentException();
       }
-      long sum = 0;
-      for (int i = 1; i <= upperBound; i++) {
-        sum += i;
-      }
+      long sum = (long) (upperBound + 1) * upperBound / 2;
       System.out.println(sum);
     } catch (IllegalArgumentException e) {
       //deleted NumberFormatException because it is part of IllegalArgumentException)
       System.out.printf("Upper bound must be an integer in the range 1...%d%n", Integer.MAX_VALUE);
-    } catch (RuntimeException e) {
     }
   }
 }
